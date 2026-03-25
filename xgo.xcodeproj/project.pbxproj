@@ -81,6 +81,8 @@
 		DA00200427000000000DAB01 /* MJPEGStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200327000000000DAB01 /* MJPEGStreamView.swift */; };
 		DA00200627000000000DAB01 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200527000000000DAB01 /* CameraVC.swift */; };
 		DA00200827000000000DAB01 /* WiFiControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200727000000000DAB01 /* WiFiControlVC.swift */; };
+		DA00300227000000000DAB01 /* LEDColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00300127000000000DAB01 /* LEDColorPickerVC.swift */; };
+		DA00300427000000000DAB01 /* TeachPlaybackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00300327000000000DAB01 /* TeachPlaybackVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +165,8 @@
 		DA00200327000000000DAB01 /* MJPEGStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJPEGStreamView.swift; sourceTree = "<group>"; };
 		DA00200527000000000DAB01 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		DA00200727000000000DAB01 /* WiFiControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiControlVC.swift; sourceTree = "<group>"; };
+		DA00300127000000000DAB01 /* LEDColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDColorPickerVC.swift; sourceTree = "<group>"; };
+		DA00300327000000000DAB01 /* TeachPlaybackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachPlaybackVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,22 @@
 			path = wificontrol;
 			sourceTree = "<group>";
 		};
+		DA00300527000000000DAB01 /* ledpicker */ = {
+			isa = PBXGroup;
+			children = (
+				DA00300127000000000DAB01 /* LEDColorPickerVC.swift */,
+			);
+			path = ledpicker;
+			sourceTree = "<group>";
+		};
+		DA00300627000000000DAB01 /* teachplayback */ = {
+			isa = PBXGroup;
+			children = (
+				DA00300327000000000DAB01 /* TeachPlaybackVC.swift */,
+			);
+			path = teachplayback;
+			sourceTree = "<group>";
+		};
 		C77FF84526A2B66B00431230 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +379,8 @@
 				DA00100327000000000DAB01 /* dashboard */,
 				DA00200927000000000DAB01 /* camera */,
 				DA00201027000000000DAB01 /* wificontrol */,
+				DA00300527000000000DAB01 /* ledpicker */,
+				DA00300627000000000DAB01 /* teachplayback */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -638,6 +660,8 @@
 				DA00200427000000000DAB01 /* MJPEGStreamView.swift in Sources */,
 				DA00200627000000000DAB01 /* CameraVC.swift in Sources */,
 				DA00200827000000000DAB01 /* WiFiControlVC.swift in Sources */,
+				DA00300227000000000DAB01 /* LEDColorPickerVC.swift in Sources */,
+				DA00300427000000000DAB01 /* TeachPlaybackVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

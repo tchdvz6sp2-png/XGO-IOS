@@ -91,6 +91,37 @@
 "camera.error" = "Error";
 "camera.invalid_ip" = "Invalid IP address";
 
+// MARK: - Homepage (Phase 3)
+"homepage.led_picker" = "LED Color";
+"homepage.teach_playback" = "Teach & Playback";
+
+// MARK: - LED Color Picker
+"led.all" = "All";
+"led.brightness" = "Brightness";
+"led.send" = "Send Color";
+"led.red" = "Red";
+"led.green" = "Green";
+"led.blue" = "Blue";
+"led.yellow" = "Yellow";
+"led.cyan" = "Cyan";
+"led.magenta" = "Magenta";
+"led.white" = "White";
+"led.off" = "Off";
+
+// MARK: - Teach & Playback
+"teach.ready" = "Ready";
+"teach.record" = "Record";
+"teach.stop" = "Stop";
+"teach.play" = "Play";
+"teach.recording" = "Recording...";
+"teach.playing" = "Playing...";
+"teach.save_title" = "Save Recording";
+"teach.save_message" = "Name this sequence:";
+"teach.discard" = "Discard";
+"teach.saved_sequences" = "Saved Sequences";
+"teach.playback_done" = "Playback complete";
+"teach.no_sequences" = "No saved sequences";
+
 // MARK: - General
 "general.back" = "Back";
 "general.reset" = "Reset";

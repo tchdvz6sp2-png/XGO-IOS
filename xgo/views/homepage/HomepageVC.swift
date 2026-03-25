@@ -28,7 +28,9 @@ class HomepageVC: UIViewController, UICollectionViewDelegate{
                     DataElement(itemTitle: NSLocalizedString("homepage.servo_control", comment: "Servo Control"), vc: ServoVC(), itemImage: #imageLiteral(resourceName: "guanjie")),
                     DataElement(itemTitle: NSLocalizedString("homepage.dashboard", comment: "Dashboard"), vc: DashboardVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
                     DataElement(itemTitle: NSLocalizedString("homepage.wifi_control", comment: "WiFi Control"), vc: WiFiControlVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
-                    DataElement(itemTitle: NSLocalizedString("homepage.camera", comment: "Camera"), vc: CameraVC(), itemImage: #imageLiteral(resourceName: "yaokong"))]
+                    DataElement(itemTitle: NSLocalizedString("homepage.camera", comment: "Camera"), vc: CameraVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
+                    DataElement(itemTitle: NSLocalizedString("homepage.led_picker", comment: "LED Color"), vc: LEDColorPickerVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
+                    DataElement(itemTitle: NSLocalizedString("homepage.teach_playback", comment: "Teach & Playback"), vc: TeachPlaybackVC(), itemImage: #imageLiteral(resourceName: "yaokong"))]
     
     struct DataElement {
         let itemTitle:String!

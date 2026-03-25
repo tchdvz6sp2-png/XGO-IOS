@@ -91,6 +91,37 @@
 "camera.error" = "Chyba";
 "camera.invalid_ip" = "Neplatná IP adresa";
 
+// MARK: - Homepage (Phase 3)
+"homepage.led_picker" = "LED Barvy";
+"homepage.teach_playback" = "Nahrávání & Přehrávání";
+
+// MARK: - LED Color Picker
+"led.all" = "Všechny";
+"led.brightness" = "Jas";
+"led.send" = "Odeslat Barvu";
+"led.red" = "Červená";
+"led.green" = "Zelená";
+"led.blue" = "Modrá";
+"led.yellow" = "Žlutá";
+"led.cyan" = "Tyrkysová";
+"led.magenta" = "Purpurová";
+"led.white" = "Bílá";
+"led.off" = "Vypnuto";
+
+// MARK: - Teach & Playback
+"teach.ready" = "Připraveno";
+"teach.record" = "Nahrávat";
+"teach.stop" = "Zastavit";
+"teach.play" = "Přehrát";
+"teach.recording" = "Nahrávání...";
+"teach.playing" = "Přehrávání...";
+"teach.save_title" = "Uložit Nahrávku";
+"teach.save_message" = "Pojmenujte sekvenci:";
+"teach.discard" = "Zahodit";
+"teach.saved_sequences" = "Uložené Sekvence";
+"teach.playback_done" = "Přehrávání dokončeno";
+"teach.no_sequences" = "Žádné uložené sekvence";
+
 // MARK: - General
 "general.back" = "Zpět";
 "general.reset" = "Reset";
