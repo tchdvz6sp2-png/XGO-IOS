@@ -10,4 +10,5 @@ target 'xgo' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'AEAlertView'
+  pod 'Socket.IO-Client-Swift', '~> 16.1.1'
 end
