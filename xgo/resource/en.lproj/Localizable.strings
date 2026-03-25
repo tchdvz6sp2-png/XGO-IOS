@@ -1,0 +1,77 @@
+/* 
+  Localizable.strings (English)
+  xgo
+
+  XGO Robot iOS App - English localization
+*/
+
+// MARK: - Homepage
+"homepage.show_mode" = "Show Mode";
+"homepage.integral_control" = "Full Control";
+"homepage.single_leg" = "Single Leg";
+"homepage.servo_control" = "Servo Control";
+
+// MARK: - Show Mode Actions (Dog - original 19)
+"action.lie_down" = "Lie Down";
+"action.stand_up" = "Stand Up";
+"action.crawl" = "Crawl";
+"action.spin" = "Spin";
+"action.mark_time" = "Mark Time";
+"action.squat" = "Squat";
+"action.roll_rotate" = "Roll";
+"action.pitch_rotate" = "Pitch";
+"action.yaw_rotate" = "Yaw";
+"action.three_axis" = "3-Axis";
+"action.pee" = "Pee";
+"action.sit_down" = "Sit Down";
+"action.wave_hand" = "Wave";
+"action.stretch" = "Stretch";
+"action.wave_body" = "Wave Body";
+"action.sway" = "Sway";
+"action.beg" = "Beg";
+"action.find_food" = "Find Food";
+"action.shake_hands" = "Handshake";
+
+// MARK: - Show Mode Actions (Rider - extended 20-24+)
+"action.push_up" = "Push Up";
+"action.look_around" = "Look Around";
+"action.dance1" = "Dance 1";
+"action.dance2" = "Dance 2";
+"action.balance_demo" = "Balance Demo";
+
+// MARK: - Integral Mode Tabs
+"tab.basic" = "Basic";
+"tab.advanced" = "Advanced";
+
+// MARK: - BLE Connection
+"ble.system_alert" = "System Alert";
+"ble.connecting" = "Connecting";
+"ble.connect_failed" = "Connection Failed";
+"ble.connect_timeout" = "Connection Timeout";
+"ble.cancel_connect" = "Cancel";
+"ble.ok" = "OK";
+"ble.scanning" = "Scanning";
+"ble.no_device" = "No Device Found";
+"ble.bt_off" = "Bluetooth is off";
+"ble.unnamed_device" = "Unnamed Device";
+"ble.disconnect" = "Disconnected";
+"ble.scan_hint" = "If you can't find the device, try restarting the device or phone Bluetooth.";
+"ble.connected" = "Connected";
+"ble.not_connected" = "Not Connected";
+
+// MARK: - Dashboard
+"dashboard.battery" = "Battery";
+"dashboard.firmware" = "Firmware";
+"dashboard.balance" = "Self-Balance";
+"dashboard.balance_on" = "Balance ON";
+"dashboard.balance_off" = "Balance OFF";
+"dashboard.imu_roll" = "Roll";
+"dashboard.imu_pitch" = "Pitch";
+"dashboard.imu_yaw" = "Yaw";
+
+// MARK: - General
+"general.back" = "Back";
+"general.reset" = "Reset";
+"general.speed" = "Speed";
+"general.height" = "Height";
+"general.send_complete" = "Command sent";

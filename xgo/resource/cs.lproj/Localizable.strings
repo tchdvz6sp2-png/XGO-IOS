@@ -1,0 +1,77 @@
+/* 
+  Localizable.strings (Czech)
+  xgo
+
+  XGO Robot iOS App - Czech localization
+*/
+
+// MARK: - Homepage
+"homepage.show_mode" = "Představení";
+"homepage.integral_control" = "Celkové Ovládání";
+"homepage.single_leg" = "Jedna Noha";
+"homepage.servo_control" = "Ovládání Serv";
+
+// MARK: - Show Mode Actions (Dog - original 19)
+"action.lie_down" = "Lehnout";
+"action.stand_up" = "Vstát";
+"action.crawl" = "Plazit se";
+"action.spin" = "Otočka";
+"action.mark_time" = "Dupání";
+"action.squat" = "Dřep";
+"action.roll_rotate" = "Roll";
+"action.pitch_rotate" = "Pitch";
+"action.yaw_rotate" = "Yaw";
+"action.three_axis" = "3 Osy";
+"action.pee" = "Čůrání";
+"action.sit_down" = "Sedni";
+"action.wave_hand" = "Mávání";
+"action.stretch" = "Protažení";
+"action.wave_body" = "Vlnění";
+"action.sway" = "Houpání";
+"action.beg" = "Prosení";
+"action.find_food" = "Hledej Jídlo";
+"action.shake_hands" = "Potřes Tlapkou";
+
+// MARK: - Show Mode Actions (Rider - extended 20-24+)
+"action.push_up" = "Kliky";
+"action.look_around" = "Rozhlédni se";
+"action.dance1" = "Tanec 1";
+"action.dance2" = "Tanec 2";
+"action.balance_demo" = "Balancování";
+
+// MARK: - Integral Mode Tabs
+"tab.basic" = "Základní";
+"tab.advanced" = "Pokročilé";
+
+// MARK: - BLE Connection
+"ble.system_alert" = "Upozornění";
+"ble.connecting" = "Připojování";
+"ble.connect_failed" = "Připojení selhalo";
+"ble.connect_timeout" = "Časový limit";
+"ble.cancel_connect" = "Zrušit";
+"ble.ok" = "OK";
+"ble.scanning" = "Hledám";
+"ble.no_device" = "Žádné zařízení";
+"ble.bt_off" = "Bluetooth je vypnutý";
+"ble.unnamed_device" = "Bezejmenné zařízení";
+"ble.disconnect" = "Odpojeno";
+"ble.scan_hint" = "Pokud zařízení nelze najít, zkuste restartovat zařízení nebo Bluetooth telefonu.";
+"ble.connected" = "Připojeno";
+"ble.not_connected" = "Nepřipojeno";
+
+// MARK: - Dashboard
+"dashboard.battery" = "Baterie";
+"dashboard.firmware" = "Firmware";
+"dashboard.balance" = "Vyvažování";
+"dashboard.balance_on" = "Balance ZAP";
+"dashboard.balance_off" = "Balance VYP";
+"dashboard.imu_roll" = "Roll";
+"dashboard.imu_pitch" = "Pitch";
+"dashboard.imu_yaw" = "Yaw";
+
+// MARK: - General
+"general.back" = "Zpět";
+"general.reset" = "Reset";
+"general.speed" = "Rychlost";
+"general.height" = "Výška";
+"general.send_complete" = "Příkaz odeslán";

@@ -2,7 +2,7 @@
 //  ShowModeVC.swift
 //  xgo
 //
-//  Created by 袁文麟 on 2021/7/21.
+//  Created by 袋文麟 on 2021/7/21.
 //
 
 import UIKit
@@ -17,7 +17,33 @@ class ShowModeVC: UIViewController,UICollectionViewDelegate{
         
     let _bag: DisposeBag = DisposeBag()
     
-    let dataItem = ["趴下","站起","匍匐前进","转圈","原地踏步","蹲起","转动ROLL","转动PITCH","转动YAW","三轴联动","撒尿","坐下","招手","伸懒腰","波浪","摇摆","求食","找食物","握手"]
+    let dataItem = [
+        NSLocalizedString("action.lie_down", comment: ""),
+        NSLocalizedString("action.stand_up", comment: ""),
+        NSLocalizedString("action.crawl", comment: ""),
+        NSLocalizedString("action.spin", comment: ""),
+        NSLocalizedString("action.mark_time", comment: ""),
+        NSLocalizedString("action.squat", comment: ""),
+        NSLocalizedString("action.roll_rotate", comment: ""),
+        NSLocalizedString("action.pitch_rotate", comment: ""),
+        NSLocalizedString("action.yaw_rotate", comment: ""),
+        NSLocalizedString("action.three_axis", comment: ""),
+        NSLocalizedString("action.pee", comment: ""),
+        NSLocalizedString("action.sit_down", comment: ""),
+        NSLocalizedString("action.wave_hand", comment: ""),
+        NSLocalizedString("action.stretch", comment: ""),
+        NSLocalizedString("action.wave_body", comment: ""),
+        NSLocalizedString("action.sway", comment: ""),
+        NSLocalizedString("action.beg", comment: ""),
+        NSLocalizedString("action.find_food", comment: ""),
+        NSLocalizedString("action.shake_hands", comment: ""),
+        // Rider extended actions (20-24)
+        NSLocalizedString("action.push_up", comment: ""),
+        NSLocalizedString("action.look_around", comment: ""),
+        NSLocalizedString("action.dance1", comment: ""),
+        NSLocalizedString("action.dance2", comment: ""),
+        NSLocalizedString("action.balance_demo", comment: "")
+    ]
     
     var _vm:ShowModeVM!
     
@@ -33,7 +59,7 @@ class ShowModeVC: UIViewController,UICollectionViewDelegate{
                 self.navigationController?.popViewController(animated: true)
         }.disposed(by: _bag)
         _vm.output.itemSelectResult.subscribe { (string) in
-            print("表演模式命令发送完成")
+            print(NSLocalizedString("general.send_complete", comment: "Command sent"))
         }.disposed(by: _bag)
         
         let items = Observable.just([SectionModel(model: "", items: dataItem)])

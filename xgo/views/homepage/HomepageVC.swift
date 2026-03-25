@@ -2,7 +2,7 @@
 //  HomepageVC.swift
 //  xgo
 //
-//  Created by 袁文麟 on 2021/7/17.
+//  Created by 袋文麟 on 2021/7/17.
 //
 
 import UIKit
@@ -22,10 +22,11 @@ class HomepageVC: UIViewController, UICollectionViewDelegate{
     
     var _vm: HomepageVM!
     
-    let dataItem = [DataElement(itemTitle: "表演模式", vc: ShowModeVC(), itemImage: #imageLiteral(resourceName: "biaoyan")),
-                    DataElement(itemTitle: "整机控制", vc: IntegralModeVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
-                    DataElement(itemTitle: "单脚控制", vc: SingleLegVC(), itemImage: #imageLiteral(resourceName: "dantui")),
-                    DataElement(itemTitle: "舵机控制", vc: ServoVC(), itemImage: #imageLiteral(resourceName: "guanjie"))]
+    let dataItem = [DataElement(itemTitle: NSLocalizedString("homepage.show_mode", comment: "Show Mode"), vc: ShowModeVC(), itemImage: #imageLiteral(resourceName: "biaoyan")),
+                    DataElement(itemTitle: NSLocalizedString("homepage.integral_control", comment: "Full Control"), vc: IntegralModeVC(), itemImage: #imageLiteral(resourceName: "yaokong")),
+                    DataElement(itemTitle: NSLocalizedString("homepage.single_leg", comment: "Single Leg"), vc: SingleLegVC(), itemImage: #imageLiteral(resourceName: "dantui")),
+                    DataElement(itemTitle: NSLocalizedString("homepage.servo_control", comment: "Servo Control"), vc: ServoVC(), itemImage: #imageLiteral(resourceName: "guanjie")),
+                    DataElement(itemTitle: "Dashboard", vc: DashboardVC(), itemImage: #imageLiteral(resourceName: "yaokong"))]
     
     struct DataElement {
         let itemTitle:String!
@@ -97,17 +98,8 @@ class HomepageVC: UIViewController, UICollectionViewDelegate{
                 if indexPath.row == selectedIndex[0].row {
                     self.navigationController?.pushViewController(dataItem[indexPath.row].vc, animated: true)
                 }
-            }else{//第一次选择
-                if indexPath.row == 1{
-                    self.navigationController?.pushViewController(IntegralModeVC(), animated: true)
-                }
             }
         }
         return true
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.scrollToItem(at: indexPath , at: .centeredHorizontally, animated: true)
-    }
 }
-

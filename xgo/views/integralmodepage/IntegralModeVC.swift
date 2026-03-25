@@ -2,7 +2,7 @@
 //  IntegralModeVC.swift
 //  xgo
 //
-//  Created by 袁文麟 on 2021/7/21.
+//  Created by 袋文麟 on 2021/7/21.
 //
 
 import UIKit
@@ -49,10 +49,10 @@ class IntegralModeVC: UIViewController,UITabBarDelegate {
         
         removeAll()
         switch item.title {
-        case "基础":
+        case NSLocalizedString("tab.basic", comment: "Basic"), "基础":
             add(_normalVC, frame: _childView.frame)
             _normalVC.didMove(toParent: self)
-        case "高级":
+        case NSLocalizedString("tab.advanced", comment: "Advanced"), "高级":
             add(_seniorVC, frame: _childView.frame)
             _seniorVC.didMove(toParent: self)
         case "XYZ":
