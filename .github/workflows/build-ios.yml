@@ -1,0 +1,53 @@
+name: Build XGO iOS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Umožňuje ruční spuštění
+
+jobs:
+  build:
+    runs-on: macos-14  # macOS Sonoma s Apple Silicon (M1)
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Ruby (pro CocoaPods)
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+
+    - name: Install CocoaPods
+      run: |
+        gem install cocoapods
+        pod install
+
+    - name: Zobrazení dostupných Xcode verzí
+      run: ls /Applications/ | grep Xcode
+
+    - name: Výběr Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+
+    - name: Build aplikace (bez podpisu - pro testování)
+      run: |
+        xcodebuild \
+          -workspace xgo.xcworkspace \
+          -scheme xgo \
+          -sdk iphonesimulator \
+          -configuration Release \
+          -derivedDataPath build \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO \
+          build
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: xgo-ios-build
+        path: build/Build/Products/Release-iphonesimulator/
+        retention-days: 30
