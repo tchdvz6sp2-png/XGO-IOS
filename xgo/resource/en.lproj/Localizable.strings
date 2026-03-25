@@ -69,6 +69,28 @@
 "dashboard.imu_pitch" = "Pitch";
 "dashboard.imu_yaw" = "Yaw";
 
+// MARK: - Homepage (new items)
+"homepage.dashboard" = "Dashboard";
+"homepage.wifi_control" = "WiFi Control";
+"homepage.camera" = "Camera";
+
+// MARK: - WiFi Control
+"wifi.connect" = "Connect";
+"wifi.disconnect" = "Disconnect";
+"wifi.connected" = "Connected";
+"wifi.disconnected" = "Disconnected";
+"wifi.connecting" = "Connecting...";
+"wifi.enter_ip" = "Enter CM4 IP";
+"wifi.connection_failed" = "Connection Failed";
+
+// MARK: - Camera
+"camera.connect" = "Start Stream";
+"camera.disconnected" = "Camera not connected";
+"camera.connecting" = "Connecting to camera...";
+"camera.streaming" = "Live";
+"camera.error" = "Error";
+"camera.invalid_ip" = "Invalid IP address";
+
 // MARK: - General
 "general.back" = "Back";
 "general.reset" = "Reset";

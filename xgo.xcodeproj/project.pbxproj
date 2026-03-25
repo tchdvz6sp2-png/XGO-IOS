@@ -77,6 +77,10 @@
 		CF5009A25E12C570709FE307 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FABECEAF7CED1BD67CA3E6 /* Pods_xgo.framework */; };
 		DA00100227000000000DAB01 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00100127000000000DAB01 /* DashboardVC.swift */; };
 		DA00100527000000000DAB01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA00100427000000000DAB01 /* Localizable.strings */; };
+		DA00200227000000000DAB01 /* WiFiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200127000000000DAB01 /* WiFiManager.swift */; };
+		DA00200427000000000DAB01 /* MJPEGStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200327000000000DAB01 /* MJPEGStreamView.swift */; };
+		DA00200627000000000DAB01 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200527000000000DAB01 /* CameraVC.swift */; };
+		DA00200827000000000DAB01 /* WiFiControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00200727000000000DAB01 /* WiFiControlVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +159,10 @@
 		DA00100127000000000DAB01 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		DA00100627000000000DAB01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA00100727000000000DAB01 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA00200127000000000DAB01 /* WiFiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiManager.swift; sourceTree = "<group>"; };
+		DA00200327000000000DAB01 /* MJPEGStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJPEGStreamView.swift; sourceTree = "<group>"; };
+		DA00200527000000000DAB01 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		DA00200727000000000DAB01 /* WiFiControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiControlVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +250,22 @@
 			path = dashboard;
 			sourceTree = "<group>";
 		};
+		DA00200927000000000DAB01 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				DA00200527000000000DAB01 /* CameraVC.swift */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		DA00201027000000000DAB01 /* wificontrol */ = {
+			isa = PBXGroup;
+			children = (
+				DA00200727000000000DAB01 /* WiFiControlVC.swift */,
+			);
+			path = wificontrol;
+			sourceTree = "<group>";
+		};
 		C77FF84526A2B66B00431230 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +333,7 @@
 				C709BC4926D779BF00518E69 /* FindControlUtils.swift */,
 				C709BC4326D63E7F00518E69 /* BleMessageAttributes.swift */,
 				C709BC4626D64E3A00518E69 /* FindBleHelper.swift */,
+				DA00200127000000000DAB01 /* WiFiManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -332,6 +357,8 @@
 				C77C164526A7C6320063E17A /* singlelegmodepage */,
 				C77C164726A7C6660063E17A /* servomodepage */,
 				DA00100327000000000DAB01 /* dashboard */,
+				DA00200927000000000DAB01 /* camera */,
+				DA00201027000000000DAB01 /* wificontrol */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -371,6 +398,7 @@
 				C7B6C5BE26C7B2DB004661AF /* RockerBarsView.swift */,
 				C7FDFEF226F0C71E001A472E /* ControlBarsView.swift */,
 				C7FDFEF626F19840001A472E /* ControlLRBarsView.swift */,
+				DA00200327000000000DAB01 /* MJPEGStreamView.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -606,6 +634,10 @@
 				C7FBED4026BC0AC8008028FE /* TopTabbarController.swift in Sources */,
 				C709BC4A26D779BF00518E69 /* FindControlUtils.swift in Sources */,
 				DA00100227000000000DAB01 /* DashboardVC.swift in Sources */,
+				DA00200227000000000DAB01 /* WiFiManager.swift in Sources */,
+				DA00200427000000000DAB01 /* MJPEGStreamView.swift in Sources */,
+				DA00200627000000000DAB01 /* CameraVC.swift in Sources */,
+				DA00200827000000000DAB01 /* WiFiControlVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +757,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN_DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

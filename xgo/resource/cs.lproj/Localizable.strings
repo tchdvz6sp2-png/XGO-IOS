@@ -69,6 +69,28 @@
 "dashboard.imu_pitch" = "Pitch";
 "dashboard.imu_yaw" = "Yaw";
 
+// MARK: - Homepage (new items)
+"homepage.dashboard" = "Přehled";
+"homepage.wifi_control" = "WiFi Ovládání";
+"homepage.camera" = "Kamera";
+
+// MARK: - WiFi Control
+"wifi.connect" = "Připojit";
+"wifi.disconnect" = "Odpojit";
+"wifi.connected" = "Připojeno";
+"wifi.disconnected" = "Odpojeno";
+"wifi.connecting" = "Připojování...";
+"wifi.enter_ip" = "Zadejte IP CM4";
+"wifi.connection_failed" = "Připojení selhalo";
+
+// MARK: - Camera
+"camera.connect" = "Spustit stream";
+"camera.disconnected" = "Kamera nepřipojena";
+"camera.connecting" = "Připojování ke kameře...";
+"camera.streaming" = "Živě";
+"camera.error" = "Chyba";
+"camera.invalid_ip" = "Neplatná IP adresa";
+
 // MARK: - General
 "general.back" = "Zpět";
 "general.reset" = "Reset";
