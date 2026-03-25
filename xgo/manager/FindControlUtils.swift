@@ -54,11 +54,11 @@ final class FindControlUtil {
         addReadMsg(data: result, delegate: delegate)
     }
     //MARK:调试模式
-    class func unInstallServo(delegate:@escaping CallBack) {//0x00舵机处于正常工作状态，0x01卸载所有舵机，0x11-0x14依次卸载1-4号腿，0x21-0x24依次恢复1-4号腿
+    class func unInstallServo(delegate:@escaping CallBack) {//0x00舆机处于正常工作状态，0x01卸载所有舆机，0x11-0x14依次卸载1-4号腿，0x21-0x24依次恢复1-4号腿
         let result:[UInt8] = [0x20,0x00];
         addReadMsg(data: result, delegate: delegate)
     }
-    class func setServo(delegate:@escaping CallBack) {//所有舵机记录当前位置为零位
+    class func setServo(delegate:@escaping CallBack) {//所有舆机记录当前位置为零位
         let result:[UInt8] = [0x21,0x00];
         addWriteMsg(data: result)
     }
@@ -145,7 +145,7 @@ final class FindControlUtil {
     
     class func actionType(type:UInt8) {
         /*运动模式 动作指令表，1-N为各个动作(0-N为十进制)
-         0为默认站姿，1趴下，2站起，3匍匐前进，4转圈，5原地踏步，6蹲起，7转动Roll，
+         0为默认站姿，1趴下，2站起，3匍匀前进，4转圈，5原地踏步，6蹲起，7转动Roll，
          8转动Pitch，9转动Yaw，10三轴转动，11撒尿，12坐下，13招手，14伸懒腰，15波浪，
          16左右摇摆，17求食，18找食物，19握手*/
         let result:[UInt8] = [0x3E,type];
@@ -260,7 +260,7 @@ final class FindControlUtil {
         addWriteMsg(data: result)
     }
     
-    //MARK:舵机模式
+    //MARK:舆机模式
     class func setServo(servo:UInt8,xyz:String,speed:UInt8) {
         switch servo {
         case 0x00:
@@ -304,7 +304,7 @@ final class FindControlUtil {
         }
     }
     
-    class func servoLFL(angle:UInt8) {//left front low 位置舵机控制 0x00-0xff 默认0x80
+    class func servoLFL(angle:UInt8) {//left front low 位置舆机控制 0x00-0xff 默认0x80
         let result:[UInt8] = [0x50,angle];
         addWriteMsg(data: result)
     }
@@ -328,7 +328,7 @@ final class FindControlUtil {
         let result:[UInt8] = [0x55,angle];
         addWriteMsg(data: result)
     }
-    class func servoLBL(angle:UInt8) {//left front low 位置舵机控制 0x00-0xff 默认0x80
+    class func servoLBL(angle:UInt8) {//left front low 位置舆机控制 0x00-0xff 默认0x80
         let result:[UInt8] = [0x56,angle];
         addWriteMsg(data: result)
     }
@@ -353,15 +353,71 @@ final class FindControlUtil {
         addWriteMsg(data: result)
     }
     
-    class func servoSpeedSet(speed:UInt8) {//设置舵机速度
+    class func servoSpeedSet(speed:UInt8) {//设置舆机速度
         let result:[UInt8] = [0x4B,speed];
         addWriteMsg(data: result)
     }
     
-    class func resetServoPosition() {//设置当前舵机位置为默认位置
+    class func resetServoPosition() {//设置当前舆机位置为默认位置
         let result:[UInt8] = [0x4B,0x01];
         addWriteMsg(data: result)
     }
     
+    // MARK: - Rider specific commands
+    
+    /// IMU self-balance ON/OFF (0x61: 0=off, 1=on)
+    class func setIMUBalance(enabled:Bool) {
+        let result:[UInt8] = [0x61, enabled ? 0x01 : 0x00];
+        addWriteMsg(data: result)
+    }
+    
+    /// Read battery level (0x01)
+    class func readBattery(delegate:@escaping CallBack) {
+        let result:[UInt8] = [0x01,0x01];
+        addReadMsg(data: result, delegate: delegate)
+    }
+    
+    /// Read IMU roll angle (0x62)
+    class func readRoll(delegate:@escaping CallBack) {
+        let result:[UInt8] = [0x62,0x04];
+        addReadMsg(data: result, delegate: delegate)
+    }
+    
+    /// Read IMU pitch angle (0x63)
+    class func readPitch(delegate:@escaping CallBack) {
+        let result:[UInt8] = [0x63,0x04];
+        addReadMsg(data: result, delegate: delegate)
+    }
+    
+    /// Read IMU yaw angle (0x64)
+    class func readYaw(delegate:@escaping CallBack) {
+        let result:[UInt8] = [0x64,0x04];
+        addReadMsg(data: result, delegate: delegate)
+    }
+    
+    /// Set LED color (0x69+index, R, G, B)
+    class func setLedColor(index:UInt8, r:UInt8, g:UInt8, b:UInt8) {
+        let addr:UInt8 = 0x69 + index
+        let result:[UInt8] = [addr, r, g, b];
+        addWriteMsg(data: result)
+    }
+    
+    /// Rider height (translation Z) (0x33 offset 2)
+    class func riderHeight(height:UInt8) {
+        let result:[UInt8] = [0x35, height];
+        addWriteMsg(data: result)
+    }
+    
+    /// Rider roll attitude (0x36)
+    class func riderRoll(angle:UInt8) {
+        let result:[UInt8] = [0x36, angle];
+        addWriteMsg(data: result)
+    }
+    
+    /// Perform mode ON/OFF - loop actions (0x03: 0=off, 1=on)
+    class func setPerformMode(enabled:Bool) {
+        let result:[UInt8] = [0x03, enabled ? 0x01 : 0x00];
+        addWriteMsg(data: result)
+    }
+    
 }
-

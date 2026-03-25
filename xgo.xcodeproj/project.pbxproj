@@ -75,6 +75,8 @@
 		C7FDFEF326F0C71E001A472E /* ControlBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDFEF226F0C71E001A472E /* ControlBarsView.swift */; };
 		C7FDFEF726F19840001A472E /* ControlLRBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDFEF626F19840001A472E /* ControlLRBarsView.swift */; };
 		CF5009A25E12C570709FE307 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FABECEAF7CED1BD67CA3E6 /* Pods_xgo.framework */; };
+		DA00100227000000000DAB01 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00100127000000000DAB01 /* DashboardVC.swift */; };
+		DA00100527000000000DAB01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA00100427000000000DAB01 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +152,9 @@
 		C7FBED4326BC0B56008028FE /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		C7FDFEF226F0C71E001A472E /* ControlBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBarsView.swift; sourceTree = "<group>"; };
 		C7FDFEF626F19840001A472E /* ControlLRBarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlLRBarsView.swift; sourceTree = "<group>"; };
+		DA00100127000000000DAB01 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		DA00100627000000000DAB01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA00100727000000000DAB01 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +232,14 @@
 				C77C166026A7C8610063E17A /* ServoVM.swift */,
 			);
 			path = servomodepage;
+			sourceTree = "<group>";
+		};
+		DA00100327000000000DAB01 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA00100127000000000DAB01 /* DashboardVC.swift */,
+			);
+			path = dashboard;
 			sourceTree = "<group>";
 		};
 		C77FF84526A2B66B00431230 /* utils */ = {
@@ -318,6 +331,7 @@
 				C77C164626A7C64E0063E17A /* integralmodepage */,
 				C77C164526A7C6320063E17A /* singlelegmodepage */,
 				C77C164726A7C6660063E17A /* servomodepage */,
+				DA00100327000000000DAB01 /* dashboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				C7ACF4A326940BA100D303FD /* Assets.xcassets */,
 				C7ACF4A526940BA100D303FD /* LaunchScreen.storyboard */,
 				C7B6C5F126C7D0EA004661AF /* AppValues.swift */,
+				DA00100427000000000DAB01 /* Localizable.strings */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -453,6 +468,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = C7ACF48E26940BA000D303FD;
 			productRefGroup = C7ACF49826940BA000D303FD /* Products */;
@@ -485,6 +501,7 @@
 				C7EAB27726B2DAB100943B9E /* ShowModeCollectionViewCell.xib in Resources */,
 				C7FBED4126BC0AC8008028FE /* TopTabbarController.xib in Resources */,
 				C7ACF4A426940BA100D303FD /* Assets.xcassets in Resources */,
+				DA00100527000000000DAB01 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +605,7 @@
 				C7B6C5C826C7CC99004661AF /* FindBleManager.swift in Sources */,
 				C7FBED4026BC0AC8008028FE /* TopTabbarController.swift in Sources */,
 				C709BC4A26D779BF00518E69 /* FindControlUtils.swift in Sources */,
+				DA00100227000000000DAB01 /* DashboardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +618,15 @@
 				C7ACF4A626940BA100D303FD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DA00100427000000000DAB01 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA00100627000000000DAB01 /* en */,
+				DA00100727000000000DAB01 /* cs */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -698,7 +725,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN_DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
