@@ -3,51 +3,68 @@ name: Build XGO iOS App
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:  # Umožňuje ruční spuštění
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
-    runs-on: macos-14  # macOS Sonoma s Apple Silicon (M1)
-    
+    runs-on: macos-15
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Ruby (pro CocoaPods)
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2'
-        bundler-cache: true
+    - name: List available Xcode versions
+      run: ls /Applications/ | grep Xcode
+
+    - name: Select Xcode
+      run: |
+        # Use latest available Xcode
+        XCODE_PATH=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+        echo "Using: $XCODE_PATH"
+        sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+        xcodebuild -version
 
     - name: Install CocoaPods
       run: |
         gem install cocoapods
-        pod install
+        pod install --repo-update
 
-    - name: Zobrazení dostupných Xcode verzí
-      run: ls /Applications/ | grep Xcode
+    - name: List schemes
+      run: |
+        xcodebuild -workspace xgo.xcworkspace -list
 
-    - name: Výběr Xcode
-      run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
-
-    - name: Build aplikace (bez podpisu - pro testování)
+    - name: Build app (unsigned - for testing)
       run: |
         xcodebuild \
           -workspace xgo.xcworkspace \
           -scheme xgo \
           -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
           -configuration Release \
           -derivedDataPath build \
-          CODE_SIGN_IDENTITY="" \
+          CODE_SIGN_IDENTITY="-" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
-          build
+          DEVELOPMENT_TEAM="" \
+          COMPILER_INDEX_STORE_ENABLE=NO \
+          build 2>&1 | tail -100
 
     - name: Upload build artifact
+      if: success()
       uses: actions/upload-artifact@v4
       with:
         name: xgo-ios-build
         path: build/Build/Products/Release-iphonesimulator/
         retention-days: 30
+
+    - name: Upload build logs on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-logs
+        path: |
+          build/Logs/
+        retention-days: 7
